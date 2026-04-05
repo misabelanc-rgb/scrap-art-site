@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Scrap Art</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3eae3, #e8dcd1);
+    text-align: center;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logo {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin: 10px 0;
+  }
+
+  .descricao {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .links a {
+    display: block;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .links a:hover {
+    background: #555;
+  }
+
+  .produto {
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+
+  .produto img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  }
+
+  button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  .feedback {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .comentario {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img class="logo" src="logo.jpg">
+
+  <h1>Scrap Art</h1>
+  <p class="descricao">
+    Demonstre carinho, compartilhe momentos especiais. Decorações, topos e personalizados perfeitos para todas as ocasiões ✨
+  </p>
+
+  <!-- LINKS -->
+  <div class="links">
+    <a href="https://instagram.com/scrapart2020" target="_blank">Instagram</a>
+    <a href="https://wa.me/5537998560464" target="_blank">Fale no WhatsApp</a>
+  </div>
+
+  <!-- PRODUTOS -->
+  <div class="produto">
+    <img src="produto1.jpg">
+    <h3>Topo de Bolo Personalizado</h3>
+    <button onclick="comprar('Topo de Bolo Personalizado')">Faça seu orçamento</button>
+  </div>
+
+  <div class="produto">
+    <img src="produto2.jpg">
+    <h3>Personalizados para Eventos</h3>
+    <button onclick="comprar('Personalizados para Eventos')">Faça seu orçamento</button>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div class="feedback">
+    <h3>Feedbacks</h3>
+    <div class="comentario">"Tudo mto lindo, perfeito!" ⭐⭐⭐⭐⭐</div>
+    <div class="comentario">"Super caprichado, recomendo demais!" ⭐⭐⭐⭐⭐</div>
+  </div>
+
+</div>
+
+<script>
+function comprar(produto) {
+  let numero = "5537998560464";
+  let mensagem = `Olá! Vim pelo site e gostaria de fazer um orçamento de ${produto} 😊`;
+  let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
